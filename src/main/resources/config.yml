@@ -1,0 +1,36 @@
+#微信商户API请使用APIv1非APIv2和APIv3
+wechat:
+  #商户号ID
+  mchId: "微信商户号"
+  #支付应用ID
+  appId: "wx123456"
+  #商户密钥
+  secretKey: "XXXXX"
+  #支付通知URL
+  notifyUrl: "http://www.baidu.com"
+#支付宝当面付请使用APIv2
+alipay:
+  #应用ID
+  appId: "支付宝应用ID"
+  #API私钥
+  privateKey: "支付API私钥"
+  #支付宝API公钥
+  publicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzU79twcPIW2YrieN0VJa75c7PM4MQnhh8x4pzlyCkwZV483XXNhA4Uaxu9f5PmO40bFPQD+cg8iS/rja1fXgclQCUD84fT8XRN5XMogBGAnM9fG1hUkhfYABjmijvHkkHZW0Lr2yOTl8OKKn9yJ+/Nvs1pIftqpUxLGMQxAQjyUNGpS3DwGF/cCa1MQhSZmGTZSft3K2/3eZrtgmDf7/1vtfkFAUPU2zz7k4dnDpXfqUH5uGp1pyXsuhER8jmHUsnKYAsOAyUgi6KlkyAcS3SUfobvF1beNqtnGFvQi5wA0fWPFpz3FFM3900hWBHQqTl18Z/kYBN7AlhKQg/XHz1QIDAQAB"
+#充值商品名称 (%price%为付款金额)
+itemName: "充值 %price%元"
+#充值提示标题栏
+title:
+  main: "&a&l充值金额 &e&l%price%"
+  sub: "&c&l支付完成后商品将自动到账"
+  fadeIn: 10
+  stay: 120
+  fadeOut: 10
+#1元=多少游戏货币
+point: 100
+#充值商品发放
+#%point%为游戏币数量, %price%为实际付款金额
+reward:
+  - "[command] points give %player% %point%"
+  - "[message] &a您已充值了%price%元 %point%点券已到账"
+  - "[broadcast] &c玩家 %player% 充值了%price%元"
+  - "[title] &a&l充值成功||&e点券已到账||10||120||10"
